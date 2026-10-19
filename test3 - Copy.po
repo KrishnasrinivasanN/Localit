@@ -1,0 +1,11 @@
+msgid "login_button"
+msgstr "Log In"
+
+msgid "logout_button"
+msgstr ""
+
+msgid "greeting"
+msgstr "Hello, {username! You have messages."
+
+msgid "error_message"
+msgstr "Something went wrong"

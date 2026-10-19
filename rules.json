@@ -1,0 +1,78 @@
+[
+  {
+    "id": "missing_translation",
+    "type": "Missing Translation",
+    "detail": "This key has no translated value.",
+    "suggested_fix": "",
+    "check": "empty"
+  },
+  {
+    "id": "broken_placeholder",
+    "type": "Broken Placeholder",
+    "detail": "Has an opening { but no closing }.",
+    "suggested_fix": "",
+    "check": "unbalancedDelimiter",
+    "open": "{",
+    "close": "}"
+  },
+  {
+    "id": "broken_placeholder_close",
+    "type": "Broken Placeholder",
+    "detail": "Has a closing } with no opening {.",
+    "suggested_fix": "",
+    "check": "unbalancedDelimiter",
+    "open": "{",
+    "close": "}"
+  },
+  {
+    "id": "suspiciously_long_value",
+    "type": "Suspiciously Long Value",
+    "detail": "Value is much longer than the key and may be untranslated or overly verbose.",
+    "suggested_fix": "",
+    "check": "suspiciousLength"
+  },
+  {
+    "id": "untranslated_key_copy",
+    "type": "Untranslated Key Copy",
+    "detail": "The translated text appears to repeat or mirror the key instead of a real translation.",
+    "suggested_fix": "",
+    "check": "copyOfKey"
+  },
+  {
+    "id": "formatting_issue",
+    "type": "Formatting Issue",
+    "detail": "Translation has extra whitespace or repeated spaces; normalize spacing.",
+    "suggested_fix": "normalizeWhitespace",
+    "check": "formatting"
+  },
+  {
+    "id": "invalid_literal",
+    "type": "Invalid Literal",
+    "detail": "Value is a literal like null or undefined, which is likely wrong for translated text.",
+    "suggested_fix": "",
+    "check": "invalidLiteral"
+  },
+  {
+    "id": "html_tag_mismatch",
+    "type": "HTML Tag Mismatch",
+    "detail": "The translation contains HTML-like markup that does not open and close correctly.",
+    "suggested_fix": "",
+    "check": "htmlTagMismatch"
+  },
+  {
+    "id": "suspiciously_short_value",
+    "type": "Suspiciously Short Value",
+    "detail": "The translated value is unusually short and may be incomplete.",
+    "suggested_fix": "",
+    "check": "suspiciousShort"
+  },
+  {
+    "id": "unmatched_angle_brackets",
+    "type": "Unmatched Angle Brackets",
+    "detail": "The value contains mismatched < or > characters, which may break formatting.",
+    "suggested_fix": "",
+    "check": "unbalancedDelimiter",
+    "open": "<",
+    "close": ">"
+  }
+]

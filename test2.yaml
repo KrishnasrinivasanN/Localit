@@ -1,0 +1,4 @@
+login_button: Log In
+logout_button: ""
+greeting: "Hello, {username! You have messages."
+error_message: Something went wrong

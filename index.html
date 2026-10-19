@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Localit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-lowest": "#010f1f",
+            "secondary-fixed": "#6bfad4",
+            "surface-variant": "#273647",
+            "tertiary": "#f3bf3c",
+            "surface-dim": "#0b1020",
+            "background": "#0b1020",
+            "on-surface": "#d4e4fa",
+            "outline": "#8d909d",
+            "on-primary-fixed": "#001a40",
+            "on-secondary-fixed": "#002018",
+            "on-tertiary": "#3f2e00",
+            "primary-container": "rgba(129, 140, 248, 0.2)",
+            "on-surface-variant": "#c3c6d3",
+            "surface-container-low": "#0b1020",
+            "surface-container": "#122131",
+            "on-error": "#690005",
+            "inverse-primary": "#265dae",
+            "outline-variant": "#424751",
+            "surface-tint": "#acc7ff",
+            "primary-fixed": "#d7e2ff",
+            "error-container": "#93000a",
+            "error": "#ffb4ab",
+            "primary": "#818cf8",
+            "on-secondary-fixed-variant": "#005141",
+            "secondary": "#48ddb9",
+            "tertiary-fixed-dim": "#f3bf3c",
+            "surface": "#051424",
+            "inverse-surface": "#d4e4fa",
+            "on-tertiary-fixed-variant": "#5b4300",
+            "tertiary-container": "#d2a11b",
+            "on-secondary-container": "#004436",
+            "surface-container-highest": "#273647",
+            "on-primary": "#002f67",
+            "on-tertiary-fixed": "#251a00",
+            "secondary-fixed-dim": "#48ddb9",
+            "inverse-on-surface": "#233143",
+            "tertiary-fixed": "#ffdf9c",
+            "surface-container-high": "#1c2b3c",
+            "on-background": "#d4e4fa",
+            "on-error-container": "#ffdad6",
+            "on-primary-fixed-variant": "#004491",
+            "on-primary-container": "#003b80",
+            "primary-fixed-dim": "#acc7ff",
+            "on-secondary": "#00382c",
+            "secondary-container": "#00bb99",
+            "surface-bright": "#2c3a4c",
+            "on-tertiary-container": "#4f3a00"
+          },
+          "fontFamily": {
+            "h3": ["Space Grotesk"],
+            "h1": ["Space Grotesk"],
+            "label-sm": ["Space Grotesk"],
+            "h2": ["Space Grotesk"],
+            "body-md": ["Space Grotesk"],
+            "code-md": ["IBM Plex Mono"],
+            "body-lg": ["Space Grotesk"],
+            "code-sm": ["IBM Plex Mono"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-panel { background: rgba(18, 25, 53, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    .scan-beam { background: linear-gradient(to bottom, transparent, #acc7ff, transparent); height: 100px; width: 100%; position: absolute; top: -100px; left: 0; opacity: 0.3; pointer-events: none; }
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .animate-marquee { display: flex; width: max-content; animation: marquee 50s linear infinite; }
+    .animate-marquee:hover { animation-play-state: paused; }
+    @keyframes scan { 0% { top: -100px; } 100% { top: 400px; } }
+  </style>
+</head>
+<body class="dark bg-[#051424] text-[#d4e4fa]">
+  <div id="root"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel" src="index.js"></script>
+</body>
+</html>
